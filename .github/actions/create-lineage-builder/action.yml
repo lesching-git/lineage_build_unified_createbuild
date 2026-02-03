@@ -32,7 +32,7 @@ runs:
       run: |
         cd $CheckoutDir/android/lineage
         repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --depth 1 --git-lfs
-        patch $CheckoutDir/android/lineage/.repo/repo/git_command.py < $CheckoutDir/patches/git_command.patch
+        #patch $CheckoutDir/android/lineage/.repo/repo/git_command.py < $CheckoutDir/patches/git_command.patch
         #repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
         #repo sync --force-sync --no-clone-bundle --no-tags -c -n -j$(nproc --all) && repo sync --force-sync --no-clone-bundle --no-tags -c -l -j16
       shell: bash
