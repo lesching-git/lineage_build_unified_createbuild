@@ -10,12 +10,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-
-    - name: Cleanup
-      uses: ./.github/actions/cleanup-runner
-
-    - name: Checkout
-      uses: actions/checkout@v4
     
     - name: Run prerequisites
       uses: ./.github/actions/create-lineage-builder
@@ -31,7 +25,7 @@ jobs:
         bash lineage_build_unified/buildbot_unified.sh treble 64VS
 
     - name: Download of build-output
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4
       with:
           name: build-output
           path: /root/build-output
