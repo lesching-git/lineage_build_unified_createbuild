@@ -13,7 +13,10 @@ jobs:
 
     - name: Cleanup
       uses: ./.github/actions/cleanup-runner
-    
+      
+    - name: Checkout
+      uses: actions/checkout@v4
+      
     - name: Run prerequisites
       uses: ./.github/actions/create-lineage-builder
 
