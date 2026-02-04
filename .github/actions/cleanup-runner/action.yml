@@ -58,7 +58,7 @@ runs:
       shell: bash
 
     - name: Maximize build space
-      uses: lesching-git/maximize-build-space@master
+      uses: ./.github/actions/maximize-build-space
       with:
          root-reserve-mb: 512
          swap-size-mb: 14336
